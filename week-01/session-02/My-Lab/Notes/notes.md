@@ -129,6 +129,7 @@
 - XHTML is more stricter and formatted.
 - Use cases of HTML : Compliant web applications.
 - Use case of XHTML : Legacy & Error-prone applications like financing systems.
+
 | HTML | XHTML |
 |---|---|
 | Tags aren't extensible | Tags are extensible  |
