@@ -1,0 +1,40 @@
+The HTML <form> element can contain one or more of the following form elements:
+
+    <input>     -
+    <label>     - defines a label for several form elements.
+    <select>    - defines a drop-down list
+                    <label for="cars">Choose a car:</label>
+                    <select id="cars" name="cars" size="3" multiple>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="fiat">Fiat</option>
+                    <option value="audi">Audi</option>
+                    </select>
+
+                    "size" attribute to specify the number of visible values.
+                    "multiple" attribute to allow the user to select more than one value.
+
+    <textarea>  -
+    <button>    -
+
+    <fieldset>  - is used to group related data in a form.
+    <legend>    - defines a caption for the <fieldset> element.
+        
+    <datalist>  - element specifies a list of pre-defined options for an <input> element.
+
+                  The list attribute of the <input> element, must refer to the id attribute 
+                  of the <datalist> element.
+
+                    <form action="/action_page.php">
+                        <input list="browsers">
+                            <datalist id="browsers">
+                                <option value="Internet Explorer">
+                                <option value="Firefox">
+                                <option value="Chrome">
+                                <option value="Opera">
+                                <option value="Safari">
+                        </datalist>
+                    </form>          
+    <output>    - represents the result of a calculation (like one performed by a script).
+    <option>    -
+    <optgroup>  -

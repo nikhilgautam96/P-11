@@ -1,0 +1,237 @@
+Note : If we don't close the tags in HTML then the code will still run but it could give 
+        absurd results in some cases specially in older browsers so we should remember to close all
+        opened tags in respective nested order.
+        XHTML has stricter rules and it makes sure that rules that can be ignored in HTML are 
+        strictly followed like - Closing all tags (including empty tags like <img/>), 
+        using small case for element & attribute names, enclosing attribute values in quotes, etc.
+
+Note : we can put the <title></title> tag in both <head></head> & <body></body>,
+        but it is recommended to put it in the <head></head>.
+
+1. Doctype : specifies type of document, like (Html, Xhtml, etc).
+
+2. Links : <a href="url">link text</a>
+
+            The target Attribute :
+            -- By default, the linked page will be displayed in the current browser window.
+            To change this, you must specify another target for the link.
+            The target attribute specifies where to open the linked document.
+
+            1. _self - Default. Opens the document in the same window/tab as it was clicked
+            2. _blank - Opens the document in a new window or tab
+            3. _parent - Opens the document in the parent frame
+            4. _top - Opens the document in the full body of the window
+
+            eg : <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+            Absolute URL : Links to an external image that is hosted on another website.
+            Example: src="https://www.w3schools.com/images/img_girl.jpg".
+            Relative URL : Links to an image that is hosted within the website. Here, the URL does not
+            include the domain name. If the URL begins without a slash, it will be relative to
+            the current page. Example: src="img_girl.jpg". If the URL begins with a slash,
+            it will be relative to the domain. Example: src="/images/img_girl.jpg".
+
+            Image as a link :
+            <a href="default.asp">
+                <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+            </a>
+
+            Link to Email Addrs :
+            Use mailto: inside the href attribute to create a link that opens the user's email program.
+            <a href="mailto:someone@example.com">Send email</a>
+
+            Link to create Bookmarks :
+            HTML links can be used to create bookmarks, so that readers can jump to specific parts
+            of a (or same) web page.
+
+            First, use the id attribute to create a bookmark:
+            <h2 id="C4">Chapter 4</h2>
+            Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:
+            <a href="#C4">Jump to Chapter 4</a>
+            You can also add a link to a bookmark on another page:
+            <a href="html_demo.html#C4">Jump to Chapter 4</a>
+
+3. Heading : HTML headings are defined with the <h1> to <h6> tags.
+        Browsers automatically add some white space (a margin) before and after a heading.
+
+4. <p>paragraph</p> : A paragraph always starts on a new line (Block level element), and browsers
+automatically add some white space (a margin) before and after a paragraph.
+
+5. Horizontal Rules
+<hr> : The
+<hr> tag defines a thematic break used to separate content
+(or define a change) in an HTML page, and is most often displayed as
+a horizontal rule.
+
+6. Line break <br> : Use <br> if you want a line break (a new line) without starting a new paragraph.
+
+7.
+<pre> </pre> : The text inside a
+<pre> element is displayed in a fixed-width font (usually Courier), 
+            and it preserves both spaces and line breaks.
+
+8. HTML Formatting Elements :
+        <b>         - Bold text
+        <strong>    - Important text
+        <i>         - Italic text
+        <em>        - Emphasized text
+        <mark>      - Marked text
+        <small>     - Smaller text
+        <del>       - Deleted text (striked through)
+        <ins>       - Inserted text (underlined)
+        <sub>       - Subscript text
+        <sup>       - Superscript text
+
+9. HTML Quotation and Citation Elements : 
+    <blockquote> - defines a section that is quoted from another source, 
+                    Browsers usually indent <blockquote> elements.
+
+                    eg : <p>Here is a quote from WWF's website:</p>
+                        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                        For 50 years, WWF has been protecting the future of nature.
+                        The world's leading conservation organization,
+                        WWF works in 100 countries and is supported by
+                        1.2 million members in the United States and
+                        close to 5 million globally.
+                        </blockquote>
+    
+    <q>          - defines a short quotation. Browsers normally insert quotation marks around the quotation.
+    
+    <abbr>       - defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".
+                   Marking abbreviations can give useful information to browsers, translation systems and search-engines.
+                   Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element. 
+    
+    <address>    - defines the contact information for the author/owner of a document or an article.
+                   <address> element usually renders in italic, and browsers will always add a 
+                       line break before and after the <address> element.
+
+    <cite>       - defines the title of a creative work 
+                   (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).
+                   The text in the <cite> element usually renders in italic.
+
+    <bdo>        - BDO stands for Bi-Directional Override.
+                   The HTML <bdo> tag is used to override the current text direction.
+
+                   eg : <bdo dir="rtl">This text will be written from right to left</bdo>
+
+
+10. Colors : 
+                - RGB  : rgb (red, green, blue)
+                         rgb(0, 0, 0) is Black, rgb(255, 255, 255) is White.
+                - RGBA : rgba (red, green, blue, alpha)
+                         alpha - opacity " 0 (fully transparent) to 1 (opaque) ".
+                - HEX  : hexadecimal representation.
+                         " #rrggbb "  where Black is #000000 and white is #ffffff.
+                - HSL  : hsl (hue, saturation, lightness)
+                         hue - (0 - 360) where 0 is red, 120 is green, 240 is blue.
+                         saturation - it is a percentage value, 0% means a shade of gray,
+                                      and 100% is the full color.
+                         lightness - it is also a percentage value, 0% is black, and 100% is white.
+                
+                - HSLA : hsla (hue, saturation, lightness, alpha)
+
+11. Image : <img src="url" alt="alternate-text"> : 
+                
+                Float property - Use the CSS float property to let the image float to the right or 
+                                 to the left of a text.
+                
+                eg : 
+                <p>
+                    <img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;">
+                    The image will float to the right of the text.
+                </p>
+                    
+                <p>
+                    <img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+                    The image will float to the left of the text.
+                </p>
+
+            HTML Image Maps :
+                With HTML image maps, you can create clickable areas on an image.
+                eg -
+                    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+                        <map name="workmap">
+                        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+                        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+                    </map>
+                Shape :
+                    rect - defines a rectangular region (x1, y1, x2, y2)
+                    circle - defines a circular region (x, y, radius)
+                    poly - defines a polygonal region (x1, y1, x2, y2, x3, y3, ...)
+                    default - defines the entire region
+
+12. HTML <picture> Element : 
+        The HTML <picture> element gives web developers more flexibility 
+        in specifying image resources.
+        
+        The <picture> element contains one or more <source> elements, 
+        each referring to different images through the "srcset" attribute. 
+        This way the browser can choose the image that best fits the current view 
+        and/or device.
+        
+        Note: Always specify an <img> element as the last child element of the <picture> element.
+              The <img> element is used by browsers that do not support the <picture> element, 
+                or if none of the <source> tags match.
+
+13. Tables :
+        Use the HTML <table> element to define a table.
+        Use the HTML <tr> element to define a table row.
+        Use the HTML <td> element to define a table data.
+        Use the HTML <th> element to define a table heading.
+        Use the HTML <caption> element to define a table caption.
+        Use the CSS "border" property to define a border.
+        Use the CSS "border-collapse" property to collapse cell borders.
+        Use the CSS "padding" property to add padding to cells.
+        Use the CSS "text-align" property to align cell text.
+        Use the CSS "border-spacing" property to set the spacing between cells.
+        Use the "colspan" attribute to make a cell span many columns.
+        Use the "rowspan" attribute to make a cell span many rows.
+        Use the "id" attribute to uniquely define one table.
+
+        <thead>	Groups the header content in a table.
+        <tbody>	Groups the body content in a table.
+        <tfoot>	Groups the footer content in a table.
+
+14. Lists : 
+    1. Ordered - type="1", type="A", type="a", type="I", type="i" .
+            <ol type="1">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+        "start" - to control the counting
+            <ol type="I" start="50">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ol>
+    
+    2. Unordered - list-style-type: (disc, circle, square, none)
+            <ul style="list-style-type:disc;">
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Milk</li>
+            </ul>
+        Note : Use the CSS property "float:left" to display a list horizontally.
+    
+    3. Description - A description list is a list of terms, with a description of each term.
+            <dl>
+                <dt>Coffee</dt>
+                <dd>- black hot drink</dd>
+                <dt>Milk</dt>
+                <dd>- white cold drink</dd>
+            </dl>
+
+15. Setting The Viewport : <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+        This gives the browser instructions on how to control the page's dimensions and scaling.
+
+        The "width=device-width" part sets the width of the page to follow the screen-width of the device 
+        (which will vary depending on the device).
+
+        The "initial-scale=1.0" part sets the initial zoom level when the page is first loaded 
+        by the browser.
+
+                    

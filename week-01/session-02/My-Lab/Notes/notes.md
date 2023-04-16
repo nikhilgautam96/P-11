@@ -48,11 +48,15 @@
 ## Javascript in html :
 **- NOTE : without using `async` or `defer` JS loading will not happen in parallel with HTML parsing.**
 1. Adding javascript in `<head>` :
-    - If the script size is heavy, then load time increases when added in head. hence not recommended.
+    - If the script size is heavy, then load time increases when added in head. 
+    - Hence not recommended for heavy scripts.
+    - the loading of JS happens when the execution engine reaches that line and at that moment the parsing is paused.
+    - parsing resumes when both the loading and execution of JS code is complete.
     - ![script-in-head](../images/script-in-head.png)
 
 2. Adding javascript at bottom of `<body>` :
     - we add javascript at bottom of body only if we dont want the script to load at the first paint.
+    - the loading of JS happens after the parsing of entire HTML is complete.
     - ![script-in-body](../images/script-in-body.png)
 
 3. Using `async` :
@@ -60,16 +64,21 @@
     - If executes the JS only when loading is completed, at that time the parsing is paused until the JS execution is finished.
     - we use `async` if our script contains some code that is necessary for our page to load at the very start.
     - eg :- if we want to load a image that comes from database at the main page of our website/app. like on amazon website the images show up the moment the js completes its loading.
+    - eg :- sometimes websites like flipkat/amazon  just load a lower resolution or pixalated image at the first page load and when we spend sometime on that page the it replaces the those images with high resolution ones. in such cases as well we will make the low resolution images as `async` so that it shows up as soon as it loads and since it is of low resolution it will load very fast if loading happens parallely.
     - ![Async-Keyword](../images/async.png)
 
 4. Using `defer` :
     - It loads the JS parallel to the HTML parsing.
     - If executes the JS only when loading and the parsing of HTML is completed or finished.
+    - eg :- in amazon website we don't want the menu click event to actually load at the very beginnig but after some images have loaded so we add the `defer` keyword for such cases.
     - ![defer-Keyword](../images/defer.png)
 
 #### Q. If I would like to load a script that is not required at first paint, should we use Async or defer?
 - `defer` : we should use defer here because it waits for the parsing of HTML and loading of JS to complete, only then it executes the JS.
  
+## link tag in HTML `<a href="..." target="..."> content </a>` :
+- ![Link-tag-in-html](../images/link-tag.png)
+
 
 ## Elements and Tags
 
