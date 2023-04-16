@@ -137,7 +137,5 @@
 | Possible to leave off any ending tag like `</body>`  | Tags must appear in pairs  |
 | Overlapping tags | No overlapping tags |
 
-
-## Tables, URL encoding & HTML5
-
-## Deploy to GitHub Pages
+## HTML-4 vs HTML-5 :
+- ![html4-vs-html5](../images/html4-vs-html5.png)
