@@ -1,3 +1,13 @@
+## Questions :
+#### Q. If I would like to load a script that is not required at first paint, should we use Async or defer?
+- `defer` : we should use defer here because it waits for the parsing of HTML and loading of JS to complete, only then it executes the JS.
+ 
+#### Q. If we want to add a inline text with different style, which tag should be used?
+- `<span></span>`
+
+#### Q. If we want to open a URL in new tab, what should be target for anchor tag?
+- `target = "_blank`
+
 ## HTML :
 - Stands for `Hyper text markup language`. tells the broser how to display the content.
 - It is a `markup language`.
@@ -73,9 +83,6 @@
     - eg :- in amazon website we don't want the menu click event to actually load at the very beginnig but after some images have loaded so we add the `defer` keyword for such cases.
     - ![defer-Keyword](../images/defer.png)
 
-#### Q. If I would like to load a script that is not required at first paint, should we use Async or defer?
-- `defer` : we should use defer here because it waits for the parsing of HTML and loading of JS to complete, only then it executes the JS.
- 
 ## link tag in HTML `<a href="..." target="..."> content </a>` :
 - `<a target="_blank|_self|_parent|_top|framename">`
 -   `Value`	    `Description`
@@ -116,7 +123,19 @@
 ## URL encoding  :
 - in below image we can see no-ascii char `" "` has been replaced by `"%20"` ascii value.
 - ![url-encoding](../images/url-encoding.png)
-## Elements and Tags
+
+## XHTML :
+- Html displays content even if it has errors.
+- XHTML is more stricter and formatted.
+- Use cases of HTML : Compliant web applications.
+- Use case of XHTML : Legacy & Error-prone applications like financing systems.
+| HTML | XHTML |
+|---|---|
+| Tags aren't extensible | Tags are extensible  |
+| Tags are not case sensitive. | Only lowercase tags are allowed  | 
+| Possible to leave off any ending tag like `</body>`  | Tags must appear in pairs  |
+| Overlapping tags | No overlapping tags |
+
 
 ## Tables, URL encoding & HTML5
 
