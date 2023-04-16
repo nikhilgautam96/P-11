@@ -46,7 +46,7 @@
 - Priority : `inline > internal > external`
 
 ## Javascript in html :
-- NOTE : without using `async` or `defer` JS loading will not happen in parallel with HTML parsing.
+**- NOTE : without using `async` or `defer` JS loading will not happen in parallel with HTML parsing.**
 1. Adding javascript in `<head>` :
     - If the script size is heavy, then load time increases when added in head. hence not recommended.
     - ![script-in-head](../images/script-in-head.png)
