@@ -112,6 +112,10 @@
 </body>
 </html>
 ```
+
+## URL encoding  :
+- in below image we can see no-ascii char `" "` has been replaced by `"%20"` ascii value.
+![url-encoding](../images/url-encoding.png)
 ## Elements and Tags
 
 ## Tables, URL encoding & HTML5
