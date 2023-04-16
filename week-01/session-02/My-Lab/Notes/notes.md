@@ -46,11 +46,11 @@
 - Priority : `inline > internal > external`
 
 ## Javascript in html :
-1. Adding javascript in <head> :
+1. Adding javascript in `<head>` :
     - If the script size is heavy, then load time increases when added in head. hence not recommended.
     - ![script-in-head](../images/script-in-head.png)
 
-2. Adding javascript at bottom of <body> :
+2. Adding javascript at bottom of `<body>` :
     - we add javascript at bottom of body only if we dont want the script to load at the first paint.
     - ![script-in-body](../images/script-in-body.png)
 
