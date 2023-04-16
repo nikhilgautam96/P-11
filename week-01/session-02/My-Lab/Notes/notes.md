@@ -77,9 +77,41 @@
 - `defer` : we should use defer here because it waits for the parsing of HTML and loading of JS to complete, only then it executes the JS.
  
 ## link tag in HTML `<a href="..." target="..."> content </a>` :
+- `<a target="_blank|_self|_parent|_top|framename">`
+-   `Value`	    `Description`
+    _blank	    Opens the linked document in a new window or tab.
+    _self	    Opens the linked document in the same frame as it was clicked `(this is default)`.
+    _parent	    Opens the linked document in the parent frame `(immediate parent)`.
+    _top	    Opens the linked document in the full body of the window `(ie. the topmost parent)`.
+    framename	Opens the linked document in the named iframe.
+
 - ![Link-tag-in-html](../images/link-tag.png)
 
+## SEO friendly tags :
+1. `<address>` :
+2. `<blockquote>` :
+3. `<abbr>` :
+4. `<q>` :
+5. `<cite>` :
+6. `<bdo>` :
 
+## Symbols and Emojis :
+
+``` html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+<body>
+    <h1>My First Emoji</h1>
+    <p>Happy face emoji is : &#128512; </p>
+</body>
+</html>
+```
 ## Elements and Tags
 
 ## Tables, URL encoding & HTML5
