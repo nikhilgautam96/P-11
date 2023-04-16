@@ -8,7 +8,7 @@
     - `Content` : is the text, image or other data that is being marked up.
 
 ## HTML Layout Structure
-![HTML Layout](../My-Lab/images/html-structure.png)
+![HTML Layout](../images/html-structure.png)
 - 
 ``` HTML
 <html>
@@ -25,9 +25,9 @@
 ## Deep dive into `<HEAD>`
 - Head is basically a container for `metadata`.
 
-- ![head](../My-Lab/images/head.png)
+- ![head](../images/head.png)
 
-- ![meta-title-description](../My-Lab/images/title-description.png)
+- ![meta-title-description](../images/title-description.png)
 
 - List of all meta tags: https://www.metatags.org/all-meta-tags-overview/
 
