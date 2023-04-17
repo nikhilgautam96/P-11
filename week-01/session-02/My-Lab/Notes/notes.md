@@ -57,6 +57,7 @@
 
 ## Javascript in html :
 **- NOTE : without using `async` or `defer` JS loading will not happen in parallel with HTML parsing.**
+**- NOTE : Using `async` and `defer` together is not recommended, but if used together JS will give higher priority to `async`.**
 1. Adding javascript in `<head>` :
     - If the script size is heavy, then load time increases when added in head. 
     - Hence not recommended for heavy scripts.
