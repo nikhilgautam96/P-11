@@ -18,7 +18,7 @@
         6. String, 
         7. Number,
     - Non-Primivitive :
-        8. Object.
+        1. Object.
 
 - JS does not differentiate between character and string. ie- it does not has any seperate type as character.
 
