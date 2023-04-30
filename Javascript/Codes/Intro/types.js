@@ -21,7 +21,7 @@ console.log(undefined);
 console.log(null);
 
 // object
-console.log({"sanket" : 123});
+console.log({"nikhil" : 123});
 
 // Symbol
 console.log(Symbol('hello'));
