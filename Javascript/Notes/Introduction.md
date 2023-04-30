@@ -8,17 +8,17 @@
 2. 
 
 ## Data types in JS :-
-- The ECMAScript language types are :
+- The `8-different` ECMAScript language types are :
     - Primitives :
-        1. Undefined, 
-        2. Null, 
-        3. Boolean, 
-        4. Symbol, 
-        5. BigInt, 
-        6. String, 
-        7. Number,
+        1. `Undefined`, 
+        2. `Null`, 
+        3. `Boolean`, 
+        4. `Symbol`, 
+        5. `BigInt`, 
+        6. `String`, 
+        7. `Number`,
     - Non-Primivitive :
-        1. Object.
+        1. `Object`.
 
 - JS does not differentiate between character and string. ie- it does not has any seperate type as character.
 
