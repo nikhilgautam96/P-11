@@ -1,6 +1,7 @@
 ## Javascript :-
 - It is a `multipurpose(used for web apps, mobile apps, etc.)` and `multi-paradigm(it supports different styles of programming - functional progamming, object oriented programming, procedural programming, etc.)` programming language(bcz it has decision making capability).
-- 
+- It is not a purely scripting language like the shell script.
+- It's official name is `EcmaScript`.
 
 ## Different ways to show/print output in JS :-
 1. `console.log("Heloo world!!");`
@@ -8,11 +9,21 @@
 
 ## Data types in JS :-
 - The ECMAScript language types are :
-    1. Undefined, 
-    2. Null, 
-    3. Boolean, 
-    4. String, 
-    5. Symbol, 
-    6. Number, 
-    7. BigInt, 
-    8. Object.
+    1. Undefined,       -----
+    2. Null,                 |
+    3. Boolean,              |
+    4. Symbol,               |  |----> `Primitives`
+    5. BigInt,               |
+    6. String,               |
+    7. Number,      ---------
+    8. Object.      |----------------> `Non-Primitive`
+
+- JS does not differentiate between character and string. ie- it does not has any seperate type as character.
+
+## Operators in JS :-
+- `typeof <value>` - it returns the type of any value in string format.
+    - eg:- 
+    ```JS
+        console.log(typeof 12);         // "number"
+        console.log(typeof "abcd");     // "string"
+    ```

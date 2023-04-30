@@ -1,0 +1,12 @@
+console.log(typeof 12);
+console.log(typeof "abcd");
+console.log(typeof -0);
+// console.log(typeof );
+// console.log(typeof );
+// console.log(typeof );
+// console.log(typeof );
+// console.log(typeof );
+// console.log(typeof );
+// console.log(typeof );
+// console.log(typeof );
+// console.log(typeof );
