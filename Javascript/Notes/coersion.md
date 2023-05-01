@@ -7,7 +7,7 @@
 ### Type Conversion :-
 - The ECMAScript language implicitly performs automatic type conversion as needed. 
 - To clarify the semantics of certain constructs it is useful to define a set of conversion abstract operations. 
-- The conversion abstract operations are polymorphic.
+- The conversion abstract operations are polymorphic.`(ie. the same operation acts differently for different JS type.)`
 - They can accept a value of any ECMAScript language type.`(ie. the 7-types defined in JS)`
 - But no other specification types(outside the knowledge of JS, like user defined classes, etc.) are used with these operations.
 - `NOTE` : 
