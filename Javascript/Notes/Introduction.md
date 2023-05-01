@@ -2,18 +2,19 @@
 - It is a `multipurpose(used for web apps, mobile apps, etc.)` and `multi-paradigm(it supports different styles of programming - functional progamming, object oriented programming, procedural programming, etc.)` programming language(bcz it has decision making capability).
 - It is not a purely scripting language like the shell script.
 - It's official name is `EcmaScript`.
-#### 4 Pillars of JS :-
-1. Coersion
-2. Scopes
-3. Asynchronous features
-4. Objects and classes
+- **`Apart from the primitive types, everything in JS is an object.`**
+#### `4 Pillars of JS` :-
+1. `Coersion`
+2. `Scopes`
+3. `Asynchronous features`
+4. `Objects and classes`
 
 ## Different ways to show/print output in JS :-
 1. `console.log("Heloo world!!");`
 2. 
 
 ## Data types in JS :-
-- The `8-different` ECMAScript language types are :
+- The `8-different ECMAScript language types` are :
     - Primitives :
         1. `Undefined`, 
         2. `Null`, 
@@ -29,22 +30,21 @@
 
 ## Operators in JS :-
 - `typeof <value>` - it returns the type of any value in string format.
-    - eg:- 
-    ```JS
-        // It is not necessary to use brackets with "typeof".
-        console.log(typeof 12);                     // "number"
-        console.log(typeof "abcd");                 // "string"
-        console.log(typeof -0);                     // "number"
-        console.log(typeof undefined);              // "undefined"
-        console.log(typeof null);                   // "object"
-        console.log(typeof {"nikhil" : 123});       // "object"
-        console.log(typeof NaN);                    // "number"
-        console.log(typeof Symbol('hey'));          // "symbol"
-        console.log(typeof true);                   // "boolean"
-        console.log(typeof typeof 12);              // "string"
-        console.log(typeof(12));                    // "number"
-        console.log(typeof(typeof(12)));            // "string"
-    ```
+```JS
+// It is not necessary to use brackets with "typeof".
+console.log(typeof 12);                     // "number"
+console.log(typeof "abcd");                 // "string"
+console.log(typeof -0);                     // "number"
+console.log(typeof undefined);              // "undefined"
+console.log(typeof null);                   // "object"
+console.log(typeof {"nikhil" : 123});       // "object"
+console.log(typeof NaN);                    // "number"
+console.log(typeof Symbol('hey'));          // "symbol"
+console.log(typeof true);                   // "boolean"
+console.log(typeof typeof 12);              // "string"
+console.log(typeof(12));                    // "number"
+console.log(typeof(typeof(12)));            // "string"
+```
 
 - `arithmetic operators` :
 ```JS
