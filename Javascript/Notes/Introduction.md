@@ -2,6 +2,11 @@
 - It is a `multipurpose(used for web apps, mobile apps, etc.)` and `multi-paradigm(it supports different styles of programming - functional progamming, object oriented programming, procedural programming, etc.)` programming language(bcz it has decision making capability).
 - It is not a purely scripting language like the shell script.
 - It's official name is `EcmaScript`.
+#### 4 Pillars of JS :-
+1. Coersion
+2. Scopes
+3. Asynchronous features
+4. Objects and classes
 
 ## Different ways to show/print output in JS :-
 1. `console.log("Heloo world!!");`
