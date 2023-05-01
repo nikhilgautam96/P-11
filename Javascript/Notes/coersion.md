@@ -1,9 +1,9 @@
 ## Coersion :-
 - Stands for `type interconversion`.
-- In laguages like {c, c++, java, etc --> type exists for variable} while in `JS --> type exists for values.`
+- In laguages like {`c, c++, java, etc --> type exists for variable`} while in `JS --> type exists for values.`
 - 2 types :-
-    1. Implicit
-    2. Explicit
+    1. `Implicit`
+    2. `Explicit`
 ### Type Conversion :-
 - The ECMAScript language implicitly performs automatic type conversion as needed. 
 - To clarify the semantics of certain constructs it is useful to define a set of conversion abstract operations. 
