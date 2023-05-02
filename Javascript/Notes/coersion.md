@@ -15,10 +15,46 @@
     - programmers must call BigInt explicitly to convert values from other types.
 
 ## `+` :-
+```JS
+const a = "10";
+const b = 5;
+const c = a + b;
+// how the "-" operation handles arguments :
+let lprim = ToPrimitive(lval);
+let rprim = ToPrimitive(rval);
+if((typeof lprim) === "string" || (typeof rprim) === "string") {
+    let lstr = ToString(lprim);
+    let rstr = ToString(rprim);
+    return lstr + rstr;
+} else {
+    let lnum = ToNumber(lprim);
+    let rnum = ToNumber(rprim);
+    return lnum + rnum;
+}
 
+```
 
 ## `-` :-
+```JS
+const a = "10";
+const b = 5;
+const c = a - b;
+// how the "-" operation handles arguments :
+let lnum = ToNumber(a);
+let rnum = ToNumber(b);
+return lnum - rnum;
 
+NOTE : 
+    NaN - (anyNumber) = NaN;
+    Infinity - (anyNumber) = Infinity;
+console.log(NaN - 10);                  // NaN
+console.log(NaN - NaN);                 // NaN
+console.log(NaN + Infinity);            // NaN
+console.log(Infinity - 5000000);        // Infinity
+console.log(Infinity - Infinity);       // NaN
+console.log(-Infinity - 5);             // -Infinity
+console.log(-Infinity + Infinity);      // NaN
+```
 
 ## `*` :-
 
