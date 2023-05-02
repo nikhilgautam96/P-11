@@ -21,6 +21,7 @@ if(input == object) {
     if(hint == "default") {
         hint = "number";
     }
+    OrdinaryToPrimitive ( input, hint )
 } else {
     return input;     // "input" is already a primitive.
 }
@@ -65,7 +66,33 @@ console.log(y.valueOf());       // [ 1, 2, 'nikhil', true, null, undefined, 5.5,
 ```
 
 ## `ToBoolean ( argument )` :-
-
+```JS
+let type = typeof(argument);
+switch(type) {
+    case "undefined" :
+        return false;
+    case "null" :
+        return false;
+    case "boolean" :
+        return argument;
+    case "number" :
+        if(argument === (+0, -0, NaN)) {
+            return false;
+        } else {
+            return true;
+        }
+    case "string" :
+        if(argument.length() === 0) {
+            return false;
+        }else {
+            return true;
+        }
+    case "symbol" :
+        return true;
+    case "object" :
+        return true;
+}
+```
 
 ## `ToNumber ( argument )`  :-
 - we can use "-" operation to mimic this operation.
@@ -123,5 +150,3 @@ console.log("nikhil" + [,]);                // nikhil
 console.log("nikhil" + [,,,,]);             // nikhil,,,
 console.log("nikhil" + [[],[],[]]);         // nikhil,,
 ```
-
-## `ToObject ( argument )`  :-
