@@ -26,7 +26,7 @@
 
     </head>
     <body>
-        Hello World!
+        All visible things are in body.
         <h1>Hello World!!</h1>
     </body>
 </html>
@@ -43,17 +43,15 @@
 
 ## 3 -ways to add CSS in your webpage :
 1. inline : 
-    - highest priority.
+    - highest priority, but not recommended for big appliations as it becomes difficult to maintain.
     - <h1 style="color: red">Hey there!!</h1>
 2. internal : 
-    - second hoghest priority.
     - recommended to add in the <head></head> section of html. 
     - <style>
         color: red;
       </style>
 3. external : 
     -  <link rel="stylesheet" type="text/css" href="style.css">
-- Priority : `inline > internal > external`
 
 ## Javascript in html : `async vs defer`
 - **NOTE : without using `async` or `defer` JS loading will not happen in parallel with HTML parsing.**

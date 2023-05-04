@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Note : Note: You cannot have forms nested inside another form. 
+            That means you cannot have a "<form>" element inside another "<form>" element.
+    </h2>
+    <br>
+    <h2>
+        Difference between Checkbox and Radio button :
+        - Checkbox can exist on its own, while radio buttons can only appear as a group 
+            (minimum of 2 radio buttons should be there).
+        - Selecting checkbox is optional but choosing one of the radio button is mandatory.
+    </h2>
+    <br>
+    <form action="">
+        <!-- The <form> element is a container for different types of input elements, 
+            such as: text fields, checkboxes, radio buttons, submit buttons, etc. -->
+        <input type="button">   - Displays a clickable button
+        <br>
+        <input type="checkbox">
+        <br>
+        <input type="color">
+        <br>
+        <input type="date">
+        <br>
+        <input type="datetime-local">
+        <br>
+        <input type="email">
+        <br>
+        <input type="file">
+        <br>
+        <input type="hidden"> - Makes the input field invisible.
+        <br>
+        <input type="image">
+        <br>
+        <input type="month">
+        <br>
+        <input type="number">
+        <br>
+        <input type="password">
+        <br>
+        <input type="radio">    - defines a radio button.
+        <br>
+        <input type="range">    - defines a control for entering a number whose exact value is 
+                                    not important (like a slider control). 
+                                    Default range is 0 to 100. However, you can set restrictions
+                                    on what numbers are accepted with the min, max, and step 
+                                    attributes.
+        <br>
+        <input type="reset">    - defines a reset button that will reset all form values to their
+                                        default values:
+        <br>                                
+        <input type="search">
+        <br>
+        <input type="submit">   - Displays a submit button (for submitting the form).
+                                    defines a button for submitting the form data to a form-handler.
+                                    The form-handler is typically a file on the server with a script 
+                                    for processing input data.
+                                    The form-handler is specified in the form's action attribute.
+        <br>
+        <input type="tel">
+        <br>
+        <input type="text"> - defines a single-line input field for text input.
+        <br>
+        <input type="time">
+        <br>
+        <input type="url">
+        <br>
+        <input type="week">
+    </form>
+
+    <!-- Label attribute example : label is always associated with an "id" attribute.-->
+    <h2>Label attribute example :</h2>
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+
+    <!-- The "name" attribute : is associated with value(default value is passed if nothing is entered)-->
+    <h2>The name Attribute :</h2>
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" value="John" name="fname"><br><br>
+        <input type="submit" value="Submit">
+        <!-- Your input was received as : { fname = John }  -->
+    </form>
+    
+    <!-- fieldset : to group elements together like radio buttons. "Must always have a legend."
+        & legend : Adds a title to the fieldset. "Must be inside a fieldset." -->
+    <h2>Fieldset :</h2>
+    <fieldset>
+        <legend>Favourite dinosaur</legend>
+        <input type="radio" id="trex" name="dinos">
+        <label for="trex">T. rex</label>
+        <input type="radio" id="tri" name="dinos">
+        <label for="tri">Triceratops</label>
+        <input type="radio" id="stego" name="dinos">
+        <label for="stego">Stegosaurus</label>
+    </fieldset>
+
+    <!-- form "method :" & "action :" attribute. -->
+    <form method="post" action="…">
+        - Tag that wraps around all the form elements.<br>
+        - "action" points to where the data should be submitted.<br>
+
+    <!-- datalist : Creates a list of items for autocompletion. 
+                    Populate the choices with <option> tags.
+                    Won’t be visible until the associated field is typed into. -->
+    <h2>Datalist :</h2>
+    <label for="province">Province</label>
+    <input id="province" list="province-list" required>
+    <!-- "list" : the id of an associated <datalist> .-->
+    <datalist id="province-list">
+        <option value="Alberta">
+        <option value="Ontario">
+        <option value="Québec">
+        <option value="Nova Scotia">
+    </datalist>
+
+    <!-- Select : The select element is used to create a drop-down list. -->
+    <h2>The select element :</h2>
+    <form action="/action_page.php">
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <article>
+        <h2>Datalist vs Select : </h2>
+        <p>
+            "Select" input element presents options for the users from which they need to select 
+            one of them. 
+            On the otherhand, 
+            "Datalist" presents a list of suggested values to the associated input form (text) 
+            field and users are free to select one of those suggested values or type in their 
+            own value.
+        </p>
+    </article>
+
+    <!-- select with "optgroup" : The optgroup tag is used to group related options in a drop-down list-->
+    <h1>The optgroup element</h1>
+    <form action="/action_page.php">
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+            <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,3 +1,9 @@
+## Categories of language :-
+- Based on the way a language executes the code lines it can be categorised into three major types :-
+    1. `Compiled`           : c++
+    2. `Interpreted`        : shell script (purely interpreted)
+    3. `Hybrid`             : Java, Javascript, python, etc.
+
 ## Javascript :-
 - It is a `multipurpose(used for web apps, mobile apps, etc.)` and `multi-paradigm(it supports different styles of programming - functional progamming, object oriented programming, procedural programming, etc.)` programming language(bcz it has decision making capability).
 - It is not a purely scripting language like the shell script.
@@ -9,9 +15,19 @@
 3. `Asynchronous features`
 4. `Objects and classes`
 
+## Boxing :-
+- `Boxing` as a term does not exists in JS docs, but it is a term given by the programming community to justify certain phenomenon that happens in JS language.
+- eg :-
+```JS
+9.toString();           // gives error.
+(9).toString();         // it does not give any error as the () does boxing. ie - converts it to Number.
+Number(9).toString();   // here also we are explicitly converting value to Number type using wrapper class "Number".
+
+"10".toString();        // this does not need boxing.
+```
+
 ## Different ways to show/print output in JS :-
 1. `console.log("Heloo world!!");`
-2. 
 
 ## Data types in JS :-
 - The `8-different ECMAScript language types` are :
@@ -26,7 +42,7 @@
     - Non-Primivitive :
         1. `Object`.
 
-- JS does not differentiate between character and string. ie- it does not has any seperate type as character.
+- `NOTE` : JS does not differentiate between character and string. ie- it does not has any seperate type as character.
 
 ## Operators in JS :-
 - `typeof <value>` - it returns the type of any value in string format.

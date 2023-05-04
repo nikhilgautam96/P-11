@@ -19,7 +19,7 @@
 const a = "10";
 const b = 5;
 const c = a + b;
-// how the "-" operation handles arguments :
+// how the "+" operation handles arguments :
 let lprim = ToPrimitive(lval);
 let rprim = ToPrimitive(rval);
 if((typeof lprim) === "string" || (typeof rprim) === "string") {

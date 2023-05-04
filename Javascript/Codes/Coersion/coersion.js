@@ -59,5 +59,25 @@ console.log(z + "sanket"); // 2 + "Sanket"
 let ob = {"b" : 100, valueOf() { return "Gautam"; }, toString() { return 10; }};
 console.log(ob + "-Nikhil");            // Gautam-Nikhil
 
-console.log("sanket" + {"a": 90, valueOf() {return {}}, toString() {return {}}});
+// console.log("sanket" + {"a": 90, valueOf() {return {}}, toString() {return {}}});
     // TypeError: Cannot convert object to primitive value
+
+console.log(!0);                    // true
+/**
+ * 0 -> false
+ * ToBoolean(0) -> false
+ * !0 -> true
+ */
+console.log(!(-4));                 // false
+/**
+ * -4 -> truthy
+ * ToBoolean(-4) = true
+ * !(-4) -> !true -> false
+ */
+console.log(!{});                   // false
+/**
+ * {} -> truthy
+ * ToBoolean({}) -> true
+ * !true -> false
+ */
+console.log(!console.log(0));       // true

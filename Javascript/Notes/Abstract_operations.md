@@ -66,6 +66,7 @@ console.log(y.valueOf());       // [ 1, 2, 'nikhil', true, null, undefined, 5.5,
 ```
 
 ## `ToBoolean ( argument )` :-
+- `Logical NOT Operator (!)` can be used to implement this operation.
 ```JS
 let type = typeof(argument);
 switch(type) {
