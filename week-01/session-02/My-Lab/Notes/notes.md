@@ -55,7 +55,7 @@
     -  <link rel="stylesheet" type="text/css" href="style.css">
 - Priority : `inline > internal > external`
 
-## Javascript in html :
+## Javascript in html : `async vs defer`
 - **NOTE : without using `async` or `defer` JS loading will not happen in parallel with HTML parsing.**
 - **NOTE : Using `async` and `defer` together is not recommended, but if used together JS will give higher priority to `async`.**
 1. Adding javascript in `<head>` :
