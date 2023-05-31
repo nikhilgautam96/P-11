@@ -6,4 +6,4 @@ let gun = function () {
     // This is an function expression.
 }
 
-(function () {})    // This is an function expression.
+(function () {})   // This is an function expression.
