@@ -18,8 +18,28 @@ let gun = function () {
 *** NOTE : In JS, we can pass function as an argument to another functions. ***
 - Function expressions are of two types.
     <ol>
-    <li> Annonymous </li>
-    <li> Named </li>
+    <li> Annonymous 
+    eg:-
+    ```JS
+    var x = function () { // "function expression"
+        // logic.
+    }
+    gun(function() { // "function expression"
+        // logic.
+    })
+    ```
+    </li>
+    <li> Named 
+    eg:-
+    ```JS
+    var x = function () { // "function expression"
+        // logic.
+    }
+    gun(function() { // "function expression"
+        // logic.
+    })
+    ```
+    </li>
     </ol>
 # IIFE (Immediately Invoked Function Expression) :-
 - 
