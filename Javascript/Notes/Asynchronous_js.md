@@ -53,6 +53,7 @@
     2. `event queue`.
     3. `event loop`.
     4. `Runtime`.
+    5. `Microtask queue`.
 - every time we run a code, 
     - whenever we call a function it allocates some space in call stack.
     - js will execute the code and it sends the Runtime functionalities like setTimeout, etc to the js Runtime.
@@ -61,6 +62,7 @@
     - condition :
         1. The call stack is empty.
         2. The global code is complete and nothing is left to execute.
+        3. The microtask queue is also empty. Microtask queue is given higher priority than the event queue.
 - eg :-
 ```js
 function process() {
