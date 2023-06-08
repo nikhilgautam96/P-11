@@ -1,17 +1,9 @@
-## Functions Introductions :-
-- 
-```JS
-    function funcName(argument) {
-        // logic goes here.
-        return x; // not mandatory, if we don't put return it automatically returns "undefined".
-    }
-```
+// In JavaScript, when you declare a function with the same name as its parent function, 
+// it creates a new local function that shadows the outer function within its own scope. 
+// This behavior is known as function name shadowing.
 
-## Function Name Shadowing :-
-- In JavaScript, when you declare a function with the same name as its parent function, it creates a new local function that shadows the outer function within its own scope. This behavior is known as function name shadowing.
+// Here's an example to illustrate this concept:
 
-- Here's an example to illustrate this concept:
-```js
 function outer() {
   console.log("Outer function");
   
@@ -47,7 +39,6 @@ outer();
 // It's important to note that function name shadowing can make your code less clear and can lead 
 // to confusion. It is generally recommended to use different names for functions to avoid potential 
 // issues and improve code readability.
-```
 
 
 

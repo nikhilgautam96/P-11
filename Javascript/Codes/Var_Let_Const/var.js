@@ -35,3 +35,14 @@ var a = 25;             // var allows redeclaration.
 console.log(a);
 
 // ----------------------------------XXXXXXXXXX------------------------------------------ //
+// Iside a "function" var will always get the function scope whether it is inside a block or not.
+consumer = 'nikhil';
+function p() {
+    console.log(consumer);          // undefined
+    if (consumer == 'nikhil') {
+        var consumer = "gautam";
+        console.log(consumer);      
+    }
+    console.log(consumer);          // undefined
+}
+p();
