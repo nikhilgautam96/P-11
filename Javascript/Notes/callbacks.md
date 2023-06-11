@@ -252,3 +252,4 @@ console.log(x, arr);
     // This means that the control flow is inverted, and the "fetchData" function determines 
     // when and how to call the "processData" function or even whether to call it or not.
     ```
+    - To deal with inversion of control we use promises as in promise we don't leave the control to utility function but actually handle it ourselves by using the `.then()` function. we register the tasks we want to do and in what order we want to do using the .then() function in the promise's `onFullfillment` array.

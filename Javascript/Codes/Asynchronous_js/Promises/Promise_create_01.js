@@ -6,7 +6,7 @@ function fetchData(url) {
         setTimeout(function processDownloading() {
             let data = "Dummy data";
             console.log("completed fetching the data");
-            // somehow e need to return the data? - TODO
+            // somehow we need to return the data? - TODO
             resolve(data);  // return some data on SUCCESS.
             console.log("hello"); // --> this gets printed eventhough promise is resolved.
             // resolve("Nikhil");   --> these lines will never get executed as promise 

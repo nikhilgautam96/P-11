@@ -60,6 +60,8 @@ function fetchData(url) {
 - whenever we call a function that returns a promise, we get a promise object that can be stored in any variable just like any other JS object.
 - Q. will js wait for the promise to be resolved if it involves any asynchronous piece of code ?
     - JS will wait only if promise involves a synchronous piece of code, otherwise not.
+    - ie. if we have `setTimeout()` in the callback provided to the promise constructor, it will be sent to `runtime` and execution of global code will continue.
+    - but if we have suppose very long loop in the callback then js will wait till the loop finishes then it will continue with code execution inside the promise callback.
 - Technically when promise gets resolved we execute some functions.
 - we can use `.then()` function on the promise object, to `bind/register` the functions we want to execute once we fulfill a promise.
 - The `.then()` function will only be called when the `promise is fulfilled`. 
@@ -101,7 +103,7 @@ function fetchData(url) {
     ```
 - The `.then()` function takes callback function as an argument that we want to execute after promise fulfills, and the `argument function` takes `value` property as parameter.
 - The `.then()` function itself returns a new promise by default, with the `[[PromiseResult]]: undefined`. 
-- If we return nothing from the callback function then a `default promise is created and returned` and it will look something like;
+- If we return nothing from the callback function then a `default promise is created and returned with value undefined` and it will look something like;
 ```js
 // Promise {<fulfilled>: undefined}
 //   [[Prototype]]: Promise
@@ -152,7 +154,7 @@ x.then(function process(value) {
 ## What `resolve(value)` does is :-
 - It changes the `state` of promise object from `pending` to `resolved`.
 - It will update the `value` property from `undefined` to `value`.
-- It is not end statement of block unlike return statement.
+- It is not the end statement inside a block unlike return statement.
 - eg :-
 ```js
 function fetchData(url) {
@@ -169,6 +171,111 @@ function fetchData(url) {
         }, 4000);
     });
 }
+```
+
+## How to append/register more than 1 function/task to the onFulfillment array :-
+- eg 1:-
+```js
+let x = Promise.resolve("Nikhil");
+console.log("Start");
+x.then(function exec_1(value) {
+    console.log("1 -- ", value);
+    return "Gautam 1";
+})
+.then(function exec_2(value) {
+    console.log("2 -- ", value);
+    return "Gautam 2";
+});
+x.then(function exec_3(value) {
+    console.log("3 -- ", value);
+    return "Gautam 3";
+});
+console.log("End");
+// OUTPUT :
+// Start
+// End
+// 1 --  Nikhil
+// 3 --  Nikhil
+// 2 --  Gautam 1
+
+// Explaination :- 
+// During the execution phase :-
+// pointer sees --> Promise 'x' is resolved.
+// pointer logs --> "Start"
+// pointer sees --> .then(callback exec_1()) is registered in onfullfillment array of 'x'
+//     It will be registered and since 'x' is already resolved 'exec_1()' will be queued in microtask queue.
+// pointer sees --> another callback exec_2() is to be registered in onfullfillment array of promise returned by .then() of 'x'.
+//     since the x.then() has not been executed yet so no promise is returned yet so this registration task is still pending.
+// pointer moves ahead --> sine event loop constantly checks if global code is exhausted.
+// pointer sees --> another .then(callback exec_3()) is registered in onfullfillment array of 'x'
+//     It will be registered and since 'x' is already resolved 'exec_3()' will be queued in microtask queue.
+// Microtask Queue looks like --> [exec_1(), exec_2()]
+// Pointer moves ahead and logs --> "End"
+// event loop checks global code is exhausted, call stack empty, microtask queue has exec_1() at top
+// exec_1() is executed a new promise is returned.
+// pointer then registers the exec_2() to the promise returned by x.then().
+//     since a fullfilled promise is returned so the the exec_2() is immediately sent to microtask queue.
+// Microtask queue --> [exec_3(), exec_2()].
+// exec_3() is executed.
+// finally exec_2() is executed.
+```
+- eg 2:-
+```js
+// Here we are actually testing how to append/register more than 1 function/task 
+// to the onFulfillment array.
+function fun() {
+    return new Promise(function f(res, rej) {
+        setTimeout(function process() {
+            console.log("resolved");
+            res(1234);
+        }, 5000);
+    })
+}
+
+let x = fun();
+x.then(function exec_1(value) {
+    console.log("value is :", value);
+    return 100;
+})
+.then(function exec(value) {
+    console.log(value);
+})
+.then(function exec(value) {
+    console.log("Hi 1");
+});
+
+x.then(function exec_2(value) {
+    console.log("yo the value is :", value);
+    return 200;
+})
+.then(function exec(value) {
+    console.log(value);
+})
+.then(function exec(value) {
+    console.log("Hi 2");
+});
+
+x.then(function exec_3(value) {
+    console.log("Hi value is :", value);
+    return 300;
+})
+.then(function exec(value) {
+    console.log(value);
+})
+.then(function exec(value) {
+    console.log("Hi 3");
+});
+// OUTPUT :
+// resolved
+// value is : 1234
+// yo the value is : 1234
+// Hi value is : 1234
+// 100
+// 200
+// 300
+// Hi 1
+// Hi 2
+// Hi 3
 ```
 
 ## Promise Chaining :-

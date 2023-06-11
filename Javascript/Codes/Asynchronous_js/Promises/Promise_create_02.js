@@ -6,7 +6,7 @@ function fetchData(url) {
         setTimeout(function processDownloading() {
             let data = "Dummy data";
             console.log("completed fetching the data");
-            // somehow e need to return the data? - TODO
+            // somehow we need to return the data? - TODO
             resolve(data);  // return some data on SUCCESS.
             console.log("hello"); // --> this gets printed eventhough promise is resolved.
             // resolve("Nikhil");   --> these lines will never get executed as promise 
@@ -63,9 +63,14 @@ y = x.then(function processWrite(value) {
 z = y.then(function processUpload(value) {
     console.log(y);
     return uploadData(value, "www.drive.google.com");
+})
+.then(function process() {
+    console.log("Done");
 });
+console.log("Ended");
 // OUTPUT :
 // Starting fetching from url  www.google.com
+// Ended
 // completed fetching the data
 // hello
 // Download promise fulfilled with value Dummy data
@@ -75,3 +80,4 @@ z = y.then(function processUpload(value) {
 // Promise { 'result.txt' }
 // Upload started on url www.drive.google.com filename is  result.txt
 // Uploading done
+// Done
