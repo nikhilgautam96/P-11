@@ -202,6 +202,25 @@ console.log("End");
 - `While async/await itself does not directly add tasks to the microtask queue, the promises returned by await expressions do add their associated callbacks to the microtask queue, allowing for asynchronous execution with higher priority than regular tasks or macrotasks.`
 
 ## `await` :-
+- ***It can only be used inside of an `asyn function` or at the `top level(outside any function) of a module`***
+- In `commonJs modules` it will work only inside a async function. but in `ES6 module` it works with top level of the module or in async functions but not inside any other piece of code say block/function.
+    - eg :-
+    ```js
+    const x = await Promise.resolve("gautam");      // works in top-level code.
+    console.log(x);
+    async function fun() {
+        const p = await Promise.resolve("nikhil");  // works inside async function.
+        console.log(p);
+    }
+    fun();
+
+    function gun() {
+        const q = await Promise.resolve("Aditya");  // does not work inside function, throws error.
+        console.log(q);
+    }
+    gun();
+    ```
+- It is used to wait for a promise and get its fullfilment value.
 - ***`await can also be used for expressions other than a Promise.`***
 - `If the value is not a Promise, await converts the value to a resolved Promise, and waits for it.`
 - `The awaited value's identity doesn't change as long as it doesn't have a then property that's callable.`

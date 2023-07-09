@@ -1,17 +1,37 @@
 # this :-
 - `this` in JS is different than java and c++:
 - In JS, `this keyword references to the calling site.` ie. from where the function or class is called.
+- **`this keyword corner case :-`**
+    ```js
+    const obj1 = {
+        name: 'Nikhil',
+        display: function() {
+            console.log(this, 'is the calling site.');
+        }
+    }
+
+    const obj2 = {
+        name: 'Nikhil',
+        display: () => {
+            console.log(this, 'is the calling site.');
+        }
+    }
+
+    obj1.display();     // { name: 'Nikhil', display: [Function: display] } is the calling site.
+
+    obj2.display();     // {} is the calling site.
+    ```
 
 # new :-
 - It looks like `new` keyword only calls constructor but actually it does a lot more than that.
 - `new keyword can be associated or used with both class and functions.`
 - The new keyword executes a 4 step process :-
-1. It creates a brand new empty JS object.
-2. It does a process of Linking.
-3. It calls the function with the `this` property assigned to the empty object it created before.
-4. The function execution starts. ( `And we know that this keyword belongs to calling site so here the this keyword will point to the empty object created at the calling site.` ).
-5. At last if the function doesn't return any specific object, then it automatically returns `this`. Otherwise it returns the object returned by us.
-- eg 1:-
+    1. It creates a brand new empty JS object.
+    2. It does a process of Linking.
+    3. It calls the function with the `this` property assigned to the empty object it created before.
+    4. The function execution starts. ( `And we know that this keyword belongs to calling site so here the this keyword will point to the empty object created at the calling site.` ).
+    5. At last, if the function doesn't return any specific object, then it automatically returns `this`. Otherwise it returns the object returned by us. `NOTE : w/o new keyword function returns 'undefined' by default`.
+    - eg 1:-
 ```js
 function Product(n, p) {
     console.log(this);
@@ -46,6 +66,3 @@ console.log(p2);        // undefined
 const p3 = new Product("mac", 150000);
 p3.display();       // mac 150000
 ```
-
-# Prototypes :-
-- Objects are created by constructor calls using new keyword.

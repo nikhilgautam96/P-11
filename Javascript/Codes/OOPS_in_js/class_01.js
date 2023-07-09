@@ -1,15 +1,17 @@
 class Product {
     age = 11;
     constructor(name, price) {
-        // Constructor is used to create new real life instances of a calss called an object.
-        // When we create an object the consatructor is the first function that gets called.
+        console.log('1',this);
+        // Constructor is used to create new real life instances of a class called an object.
+        // When we create an object the constructor is the first function that gets called.
         this.name = name;
         this.price = price;
         this.brand = 'Nike';
+        console.log('2',this);
     }
     // member functions
     displayProduct() {
-        console.log(this.name, this.age, this.brand, this.price)
+        console.log(this.name, this.age, this.brand, this.price);
     }
     buyProduct() {
         
@@ -23,4 +25,5 @@ console.log(iphone, macbook);
 // Product { age: 11, name: 'Iphone 14 pro', price: 114000, brand: 'Nike' } 
 // Product { age: 11, name: 'Macbook pro', price: 154000, brand: 'Nike' }
 
+console.log("type is : ", typeof Product);      // function
 iphone.displayProduct();
